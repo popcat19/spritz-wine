@@ -36,10 +36,10 @@ _configuration() {
     BUILD_NAME="${BUILD_NAME:-wine-dwproton}"
 
     # Wine version settings
-    WINE_VERSION=''
+    WINE_VERSION="${WINE_VERSION:-}"
     STAGING_VERSION=''
     WINE_BRANCH="${WINE_BRANCH:-}"
-    RELEASE_VERSION='11'
+    RELEASE_VERSION="${RELEASE_VERSION:-11}"
     PATCHSET=''
 
     # Build configuration
@@ -61,8 +61,8 @@ _configuration() {
     WINE_TKG_URL="https://github.com/Kron4ek/wine-tkg"
     WINE_CACHY_URL="https://github.com/CachyOS/wine-cachyos"
     WINE_VALVE_URL="https://github.com/ValveSoftware/wine"
-    WINE_DWPROTON_URL="https://dawn.wine/dawn-winery/wine-dwproton"
-    WINE_DWPROTON_FALLBACK_URL="https://github.com/NelloKudo/wine-dwproton"
+    WINE_DWPROTON_URL="${WINE_DWPROTON_URL:-https://dawn.wine/dawn-winery/wine-dwproton}"
+    WINE_DWPROTON_FALLBACK_URL="${WINE_DWPROTON_FALLBACK_URL:-https://github.com/NelloKudo/wine-dwproton}"
 
     # tkg/cachy/valve/dwproton settings
     for variant in tkg cachy valve dwproton; do

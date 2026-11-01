@@ -20,7 +20,8 @@ docker tag nellokudo/wine-builder:steamrt4-190426 wine-builder:latest
 
 ## Allow overriding variables in wine_builder.sh
 vars=(USE_STAGING USE_TKG BUILD_NAME \
-      WINE_BRANCH PATCHSET PATCHSET_REPO TAG_FILTER)
+      WINE_BRANCH PATCHSET PATCHSET_REPO TAG_FILTER \
+      WINE_VERSION RELEASE_VERSION WINE_DWPROTON_URL WINE_DWPROTON_FALLBACK_URL)
 
 WB_ENV_ARGS=()
 for var in "${vars[@]}"; do
